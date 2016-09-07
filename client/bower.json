@@ -1,0 +1,17 @@
+{
+  "name": "client",
+  "homepage": "https://github.com/nss-day-cohort-13/music-history-api-muzak-history",
+  "authors": [
+    "Adam Oswalt <email@adamoswalt.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
