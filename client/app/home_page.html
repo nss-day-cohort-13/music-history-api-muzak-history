@@ -6,5 +6,6 @@
     <div ng-repeat="song in home.songs">
       <a class="song-title" ng-click="home.showSongInfo(song)">{{song.name | title}}</a>
     </div>
+    <input type="button" ng-show="home.nextPageUrl" ng-click="home.more()" value="More" />
   </div>
 </div>
