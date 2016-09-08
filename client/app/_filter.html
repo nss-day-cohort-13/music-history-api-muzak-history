@@ -9,14 +9,14 @@
     <div class="artist">
       <!-- ARTIST SELECT -->
       <label for="artist-select">Artist:</label>
-      <select id="artist-select" name="artist" ng-model="home.selectedArtist" ng-options="resource.name for resource in home.artist">
+      <select id="artist-select" name="artist" ng-model="home.selectedArtist" ng-options="resource.name for resource in home.artists">
         <option value="" ng-show="true"></option>
       </select>
     </div>
     <div class="album">
       <!-- ALBUM SELECT -->
       <label for="album-select">Album:</label>
-      <select id="album-select" name="album" ng-model="home.selectedAlbum" ng-options="resource.name for resource in home.album">
+      <select id="album-select" name="album" ng-model="home.selectedAlbum" ng-options="resource.name for resource in home.albums">
         <option value="" ng-show="true"></option>
       </select>
     </div>
