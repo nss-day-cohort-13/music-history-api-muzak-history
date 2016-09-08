@@ -1,34 +1,58 @@
 from rest_framework import viewsets
 from music.models import Artist, Album, Song
-from music.serializers import ArtistSerializer, AlbumSerializer, SongSerializer
+from music.serializers import *
 
 
-class ArtistList(viewsets.ModelViewSet):
+class Artist(viewsets.ModelViewSet):
     model = Artist
     queryset = Artist.objects.all()
     serializer_class = ArtistSerializer
 
-class ArtistDetail(viewsets.ModelViewSet):
-    model = Artist
-    queryset = Artist.objects.all()
-    serializer_class = ArtistSerializer
+    def get_serializer_class(self):
+        if self.action =="list":
+            return ArtistSerializer
+        else:
+            return ArtistDetailSerializer
 
-class AlbumList(viewsets.ModelViewSet):
+
+# class ArtistDetail(viewsets.ModelViewSet):
+#     model = Artist
+#     queryset = Artist.objects.all()
+#     serializer_class = ArtistDetailSerializer
+
+class Album(viewsets.ModelViewSet):
     model = Album
     queryset = Album.objects.all()
     serializer_class = AlbumSerializer
 
-class AlbumDetail(viewsets.ModelViewSet):
-    model = Album
-    queryset = Album.objects.all()
-    serializer_class = AlbumSerializer
+    def get_serializer_class(self):
+        if self.action =="list":
+            return AlbumSerializer
+        elif self.action == "create" or self.action == "update":
+            return AlbumEditSerializer
+        else:
+            return AlbumDetailSerializer
 
-class SongList(viewsets.ModelViewSet):
+
+# class AlbumDetail(viewsets.ModelViewSet):
+#     model = Album
+#     queryset = Album.objects.all()
+#     serializer_class = AlbumDetailSerializer
+
+class Song(viewsets.ModelViewSet):
     model = Song
     queryset = Song.objects.all()
     serializer_class = SongSerializer
 
-class SongDetail(viewsets.ModelViewSet):
-    model = Song
-    queryset = Song.objects.all()
-    serializer_class = SongSerializer
+    def get_serializer_class(self):
+        if self.action == "list":
+            return SongSerializer
+        elif self.action == "create" or self.action == "update":
+            return SongEditSerializer
+        else:
+            return SongDetailSerializer
+
+# class SongDetail(viewsets.ModelViewSet):
+#     model = Song
+#     queryset = Song.objects.all()
+#     serializer_class = SongDetailSerializer

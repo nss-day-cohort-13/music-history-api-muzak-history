@@ -3,9 +3,9 @@ from django.conf.urls import url, include
 from music import views
 
 router = routers.DefaultRouter()
-router.register(r'artist', views.ArtistList)
-router.register(r'album', views.AlbumList)
-router.register(r'song', views.SongList)
+router.register(r'artist', views.Artist)
+router.register(r'album', views.Album)
+router.register(r'song', views.Song)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
