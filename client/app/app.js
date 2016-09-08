@@ -1,4 +1,4 @@
-angular.module("app", ["ngRoute"])
+angular.module("app", ["ngRoute", "ui.bootstrap"])
   .config(($routeProvider) => {
     $routeProvider
       .when("/", {
@@ -12,4 +12,6 @@ angular.module("app", ["ngRoute"])
         templateUrl: "app/add_music.html"
       })
       .otherwise("/")
-    });
+    })
+
+  .filter("title", () => string => string.replace(/(\b\w)+/g, c => c.toUpperCase()))
