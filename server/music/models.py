@@ -13,13 +13,14 @@ class Artist(models.Model):
 
 class Song(models.Model):
     name = models.CharField(max_length=75)
+    lengthSeconds = models.IntegerField()
     artists = models.ManyToManyField(Artist)
 
     def __str__(self):
         return "{}: {}".format(self.id, self.name)
 
     def __unicode__(self):
-            return "{}: {}".format(self.id, self.name)
+        return "{}: {}".format(self.id, self.name)
 
 
 class Album(models.Model):
