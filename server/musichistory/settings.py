@@ -61,6 +61,11 @@ CORS_ORIGIN_WHITELIST = (
 
 ROOT_URLCONF = 'musichistory.urls'
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
