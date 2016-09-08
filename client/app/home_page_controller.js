@@ -1,6 +1,8 @@
 angular.module("app")
     .controller("HomePageCtrl", function($http, RootFactory) {
       const home = this;
+      home.songs = [];
+      home.nextPageUrl = "";
 
       RootFactory.root
         .then(data => $http.get(data.song))
@@ -19,4 +21,5 @@ angular.module("app")
           .then(data => $http.get(data.album))
           .then(res => home.album = res.data)
           .then(s => console.log(s))
+
     })
