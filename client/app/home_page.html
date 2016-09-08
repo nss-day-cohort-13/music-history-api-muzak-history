@@ -3,9 +3,10 @@
   <div ng-include="'app/_filter.html'"></div>
 
   <div class="main-body">
-    <div ng-repeat="song in home.songs">
+    <div ng-repeat="song in home.songs | filter:home.selectedArtist.name | filter:home.selectedAlbum.name">
       <h1>{{song.name}}</h1>
-      <h2>{{song.lengthSeconds}}</h2>
+      <h2>{{song.artists[0].name}} </h2>
+      <h2>length: {{song.lengthSeconds}}</h2>
     </div>
 <!-- <div class="fav-song">
       <h1>"Bulletproof"</h1>
