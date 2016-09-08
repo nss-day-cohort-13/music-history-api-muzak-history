@@ -9,11 +9,10 @@ angular.module("app")
       function loadSongs(url) {
         $http.get(url)
           .then(songsRes => songsRes.data)
-          .then(songsData => { home.nextPageUrl = songsData.next; return songsData.results })
+          .then(songsData => { home.nextPageUrl = songsData.next; return songsData.results; })
           .then(songList => songList.forEach(song =>
-            $http.get(song.url).then(res => home.songs.push(res.data))))
-
+            $http.get(song.url).then(res => home.songs.push(res.data))));
       }
 
-      RootFactoy.root.then(data => loadSongs(data.song))
+      RootFactoy.root.then(data => loadSongs(data.song));
     })
