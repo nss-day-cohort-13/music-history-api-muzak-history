@@ -15,11 +15,6 @@ class Artist(viewsets.ModelViewSet):
             return ArtistDetailSerializer
 
 
-# class ArtistDetail(viewsets.ModelViewSet):
-#     model = Artist
-#     queryset = Artist.objects.all()
-#     serializer_class = ArtistDetailSerializer
-
 class Album(viewsets.ModelViewSet):
     model = Album
     queryset = Album.objects.all()
@@ -34,11 +29,6 @@ class Album(viewsets.ModelViewSet):
             return AlbumDetailSerializer
 
 
-# class AlbumDetail(viewsets.ModelViewSet):
-#     model = Album
-#     queryset = Album.objects.all()
-#     serializer_class = AlbumDetailSerializer
-
 class Song(viewsets.ModelViewSet):
     model = Song
     queryset = Song.objects.all()
@@ -51,8 +41,3 @@ class Song(viewsets.ModelViewSet):
             return SongEditSerializer
         else:
             return SongDetailSerializer
-
-# class SongDetail(viewsets.ModelViewSet):
-#     model = Song
-#     queryset = Song.objects.all()
-#     serializer_class = SongDetailSerializer

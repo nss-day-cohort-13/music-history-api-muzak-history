@@ -13,12 +13,6 @@ class ArtistDetailSerializer(serializers.HyperlinkedModelSerializer):
         model = Artist
         fields = ('id', 'name', 'url')
 
-# class ArtistEditSerializer(serializers.HyperlinkedModelSerializer):
-#
-#     class Meta:
-#         model = Artist
-#         fields = ('id', 'name', 'url')
-
 
 class SongSerializer(serializers.HyperlinkedModelSerializer):
 
