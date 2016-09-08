@@ -1,5 +1,5 @@
 angular.module("app")
-    .controller("AddMusicCtrl", function($scope) {
+    .controller("AddMusicCtrl", function(RootFactory) {
 
 
     })

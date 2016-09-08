@@ -11,6 +11,8 @@ class Artist(viewsets.ModelViewSet):
     def get_serializer_class(self):
         if self.action =="list":
             return ArtistSerializer
+        elif self.action == "create" or self.action == "update":
+            return ArtistEditSerializer
         else:
             return ArtistDetailSerializer
 

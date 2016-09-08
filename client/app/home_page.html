@@ -3,6 +3,10 @@
   <div ng-include="'app/_filter.html'"></div>
 
   <div class="main-body">
+    <div ng-repeat="song in home.songs">
+      <h1>{{song.name}}</h1>
+      <h2>{{song.lengthSeconds}}</h2>
+    </div>
 <!-- <div class="fav-song">
       <h1>"Bulletproof"</h1>
       <p>La Roux | La Roux | Pop</p>

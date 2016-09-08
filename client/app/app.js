@@ -3,14 +3,13 @@ angular.module("app", ["ngRoute"])
     $routeProvider
       .when("/", {
         controller: "HomePageCtrl",
-        templateUrl: "app/home_page.html"
-      })
-      .when("/view-music", {
-        controller: "HomePageCtrl",
+        controllerAs: "home",
         templateUrl: "app/home_page.html"
       })
       .when("/add-music", {
         controller: "AddMusicCtrl",
+        controllerAs: "add",
         templateUrl: "app/add_music.html"
       })
+      .otherwise("/")
     });
