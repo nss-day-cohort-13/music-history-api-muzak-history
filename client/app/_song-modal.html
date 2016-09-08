@@ -1,0 +1,8 @@
+<div class="modal-body">
+  <h1>{{songInfo.song.name | title}}</h1>
+  <p><span class="length-label">Song Length: </span>{{songInfo.song.lengthSeconds}} seconds</p>
+  <h2>Artists</h2>
+  <p ng-repeat="artist in songInfo.song.artists">{{artist.name | title}}</p>
+  <h2>Albums</h2>
+  <p ng-repeat="album in songInfo.song.album_set">{{album.name | title}}</p>
+</div>

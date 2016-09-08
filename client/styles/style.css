@@ -149,3 +149,7 @@ footer {
   clear: both;
   margin: 3% 10%;
 }
+
+.song-title {
+    font-size: 3rem;
+}
