@@ -1,10 +1,10 @@
-.navbar {
+.header {
   background-color: #FFB4B0;
   border: 3px solid #AA4040;
-  border-radius: 0;
+  margin-bottom: 1.25rem;
 }
 
-.navbar .navbar-brand {
+.header-title {
   color: #AA4040;
   font-size: 3rem;
   font-weight: bold;

@@ -2,16 +2,16 @@
   <div class="form-group">
     <label for="artist-select">Artist:</label>
     <select class="form-control"
-      ng-model="home.selectedArtist"
-      ng-options="resource.name | title for resource in home.artists">
+      ng-model="listing.selectedArtist"
+      ng-options="resource.name | title for resource in listing.artists">
         <option value="" ng-show="true"></option>
     </select>
   </div>
   <div class="form-group">
     <label for="album-select">Album:</label>
     <select class="form-control"
-      ng-model="home.selectedAlbum"
-      ng-options="resource.name | title for resource in home.albums">
+      ng-model="listing.selectedAlbum"
+      ng-options="resource.name | title for resource in listing.albums">
         <option value="" ng-show="true"></option>
     </select>
   </div>
