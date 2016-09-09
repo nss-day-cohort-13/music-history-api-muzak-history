@@ -1,5 +1,5 @@
 angular.module("app")
-    .controller("HomePageCtrl", function($http, RootFactory, $timeout) {
+    .controller("HomePageCtrl", function($http, $uibModal, RootFactory) {
       const home = this;
       home.songs = [];
       home.nextPageUrl = "";
@@ -17,6 +17,12 @@ angular.module("app")
       .then(res => home.albums = res.data.results)
       .then(s => console.log(s))
 
+      home.showSongInfo = song => $uibModal.open({
+        templateUrl: "app/_song-modal.html",
+        controller: "SongInfoModalCtrl",
+        controllerAs: "songInfo",
+        resolve: { song }
+      })
       home.more = () => { if(home.nextPageUrl) loadSongs(home.nextPageUrl); }
 
       function loadSongs(url) {
