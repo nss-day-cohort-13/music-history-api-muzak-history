@@ -1,11 +1,17 @@
-<div class="main">
-  <div ng-include="'app/_navbar.html'"></div>
+<div class="col-xs-3 col-xs-offset-1" >
   <div ng-include="'app/_filter.html'"></div>
+</div>
 
-  <div class="main-body">
-    <div ng-repeat="song in home.songs | filter:home.selectedArtist.name | filter:home.selectedAlbum.name">
-      <a class="song-title" ng-click="home.showSongInfo(song)">{{song.name | title}}</a>
-    </div>
-    <input type="button" ng-show="home.nextPageUrl" ng-click="home.more()" value="More" />
+<div class="song-list panel col-xs-7">
+  <div class="song-title" ng-click="home.showSongInfo(song)"
+    ng-repeat="song in home.songs
+      | filter:home.selectedArtist.name
+      | filter:home.selectedAlbum.name">
+        {{song.name | title}}
   </div>
+  <input type="button"
+    class="btn btn-primary"
+    ng-show="home.nextPageUrl"
+    ng-click="home.more()"
+    value="More" />
 </div>
