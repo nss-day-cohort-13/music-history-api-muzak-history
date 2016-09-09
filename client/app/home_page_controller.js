@@ -25,12 +25,10 @@ angular.module("app")
             home.nextPageUrl = songsData.next;
             return songsData.results;
           })
-          .then(songList => songList.forEach(song =>
+          .then(songList => songList.forEach(song => {
+            home.songs.push(song);
             $http.get(song.url)
-              .then(res => {
-                home.songs.push(res.data);
-                return res.data;
-              })
+              .then(res => Object.assign(song, res.data))
               .then(songData => {
                 home.artists = home.artists.concat(songData.artists);
                 home.albums = home.albums.concat(songData.album_set);
@@ -49,6 +47,7 @@ angular.module("app")
                 });
                 home.albums = uniqueAlbums;
               })
+            }
           ));
       }
 
