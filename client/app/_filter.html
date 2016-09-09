@@ -1,29 +1,16 @@
 <div>
-  <!-- LEFT-NAV -->
   <section class="left-nav">
-    <div class="song-length">
-      <!-- SONG LENGTH -->
-      <label for="song-length">Song Length:</label>
-      <input type="range" id="song-length" name="song-length" min="0" max="600" step="60"></input>
-    </div>
     <div class="artist">
-      <!-- ARTIST SELECT -->
       <label for="artist-select">Artist:</label>
       <select id="artist-select" name="artist" ng-model="home.selectedArtist" ng-options="resource.name for resource in home.artists">
         <option value="" ng-show="true"></option>
       </select>
     </div>
     <div class="album">
-      <!-- ALBUM SELECT -->
       <label for="album-select">Album:</label>
       <select id="album-select" name="album" ng-model="home.selectedAlbum" ng-options="resource.name for resource in home.albums">
         <option value="" ng-show="true"></option>
       </select>
     </div>
-    <div>
-      <!-- GENRE CHECKBOX -->
-
-    </div>
-    <button type="filter">Filter</button>
   </section>
 </div>

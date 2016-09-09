@@ -15,8 +15,7 @@
   display: inline;
 }
 
-.top-nav li:nth-child(2) {
-  border-left: 2px solid black;
+.top-nav li:not(:last-child) {
   border-right: 2px solid black;
   padding: 3px;
 }
