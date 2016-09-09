@@ -1,0 +1,47 @@
+.header {
+  background-color: #FFB4B0;
+  border: 3px solid #AA4040;
+  margin-bottom: 1.25rem;
+}
+
+.header-title {
+  color: #AA4040;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.filter-panel {
+  background-color: #4DD7FA;
+  border: 2px solid #2593af;
+  padding: 1rem;
+}
+
+.filter-panel label {
+  color: #0a5263;
+  font-size: 2rem;
+}
+
+.song-list {
+  background-color: #FEFAC0;
+  border: 2px solid #a4a058;
+  padding: 1rem;
+}
+
+.song-title {
+  cursor: pointer;
+  font-size: 3rem;
+  color: #1d7186;
+  padding: .25rem .5rem;
+}
+
+.song-title:hover {
+  background-color: #e6e192;
+}
+
+.song-title:not(:last-of-type) {
+  border-bottom: 3px solid #bbb769;
+}
+
+.song-title:last-of-type {
+  margin-bottom: 1rem;
+}
