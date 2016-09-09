@@ -1,0 +1,13 @@
+<div class="song-list panel">
+  <div class="song-title" ng-click="listing.showSongInfo(song)"
+    ng-repeat="song in listing.songs
+      | filter:listing.selectedArtist.name
+      | filter:listing.selectedAlbum.name">
+        {{song.name | title}}
+  </div>
+  <input type="button"
+    class="btn btn-primary"
+    ng-show="listing.nextPageUrl"
+    ng-click="listing.more()"
+    value="More" />
+</div>
